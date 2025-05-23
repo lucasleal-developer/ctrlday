@@ -91,12 +91,7 @@ const RegistrationForm = () => {
           eventsList = '🎨 Competição de Artes Digitais – Piskel Kids e Concurso de Cosplay\n';
 
           // Detalhes do Piskel
-          eventDetails += `🎨 Competição de Artes Digitais – Piskel Kids - 08h às 9:45h
-🕒 Duração: 1h45
-📍 Plataforma: Zoom
-🔗 Link de acesso: https://zoom.us/j/99451475691
-
-Esta sala é dedicada aos nossos artistas mirins que criarão suas pixel artes com a ferramenta Piskel!
+          eventDetails += `Esta sala é dedicada aos nossos artistas mirins que criarão suas pixel artes com a ferramenta Piskel!
 Durante a competição, os alunos irão compartilhar suas telas o tempo todo e desenvolver seus projetos ao vivo.
 
 Nossa banca avaliadora irá analisar cada trabalho com base em três critérios principais:
@@ -116,12 +111,7 @@ Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas d
 Prepare-se para uma mostra cheia de talento, ideias incríveis e muita diversão! 💜🚀\n\n`;
 
           // Detalhes do Cosplay
-          eventDetails += `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
-🕒 Duração: 1h
-📍 Plataforma: Zoom
-🔗 Link de acesso: https://zoom.us/j/94176618702
-
-Chegou o momento mais divertido e animado do evento!
+          eventDetails += `Chegou o momento mais divertido e animado do evento!
 No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
 
 🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
@@ -147,12 +137,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
           eventTime = '08h às 9:45h';
           eventsList = '🎨 Competição de Artes Digitais – Piskel Kids\n';
 
-          eventDetails = `🎨 Competição de Artes Digitais – Piskel Kids - 08h às 9:45h
-🕒 Duração: 1h45
-📍 Plataforma: Zoom
-🔗 Link de acesso: https://zoom.us/j/99451475691
-
-Esta sala é dedicada aos nossos artistas mirins que criarão suas pixel artes com a ferramenta Piskel!
+          eventDetails = `Esta sala é dedicada aos nossos artistas mirins que criarão suas pixel artes com a ferramenta Piskel!
 Durante a competição, os alunos irão compartilhar suas telas o tempo todo e desenvolver seus projetos ao vivo.
 
 Nossa banca avaliadora irá analisar cada trabalho com base em três critérios principais:
