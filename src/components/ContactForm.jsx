@@ -459,7 +459,8 @@ Detalhes do evento:
 🔗 Link de acesso: ${headerLink}
 
 ${formData.isParent ? 'Você está inscrito para:' : 'Você está inscrito para:'}
-${eventsList}
+${eventsList.replace('\n', '')}
+
 ${eventDetails}
 
 Lembre-se de entrar na sala alguns minutos antes do início para testar seu áudio e vídeo.
@@ -671,7 +672,8 @@ Detalhes do evento:
 🔗 Link de acesso: ${emailLink}
 
 Você está inscrito para:
-${eventsList}
+${eventsList.replace('\n', '')}
+
 ${eventDetails}
 
 Lembre-se de entrar na sala alguns minutos antes do início para testar seu áudio e vídeo.
