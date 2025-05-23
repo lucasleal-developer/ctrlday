@@ -5,8 +5,8 @@ import emailjs from '@emailjs/browser';
 const RegistrationForm = () => {
   // Inicializar o EmailJS
   useEffect(() => {
-    // Corrigido para a chave pública correta
-    emailjs.init("lH5HG9dqpSBR_9_lD");
+    // Chave pública correta
+    emailjs.init("lH5HG9dqpSBR_9_ID");
     console.log("EmailJS inicializado");
   }, []);
 
@@ -168,9 +168,9 @@ Equipe Ctrl+Play
     // Usando o método mais recente com a chave pública explícita
     emailjs.send(
       'service_hacz2wh',
-      'template_5rq0zt9',
+      'template_5rq02t9',
       templateParams,
-      'lH5HG9dqpSBR_9_lD' // Chave pública explícita - verifique se está correta
+      'lH5HG9dqpSBR_9_ID' // Chave pública explícita - verifique se está correta
     )
     .then((response) => {
       console.log('Email enviado com sucesso!', response);
