@@ -491,6 +491,34 @@ Equipe Ctrl+Play
       return;
     }
 
+    // Determinar duração e link com base nas seleções do usuário
+    let emailDuration = '45 minutos';
+    let emailLink = 'https://zoom.us/j/7705946111';
+
+    // Links específicos para Kids
+    if (formData.isKid) {
+      if (formData.events.includes('piskel') || formData.events.includes('piskel_cosplay')) {
+        emailLink = 'https://zoom.us/j/99451475691';
+        emailDuration = '1h45';
+      } else if (formData.events.includes('cosplay')) {
+        emailLink = 'https://zoom.us/j/94176618702';
+        emailDuration = '1h';
+      }
+    }
+    // Links específicos para Teens
+    else if (formData.isTeen) {
+      if (formData.events.includes('piskel') || formData.events.includes('piskel_cosplay')) {
+        emailLink = 'https://zoom.us/j/99658262515';
+        emailDuration = '1h45';
+      } else if (formData.events.includes('voxel') || formData.events.includes('voxel_cosplay')) {
+        emailLink = 'https://zoom.us/j/92535159210';
+        emailDuration = '1h45';
+      } else if (formData.events.includes('cosplay')) {
+        emailLink = 'https://zoom.us/j/94176618702';
+        emailDuration = '1h';
+      }
+    }
+
     // Preparar os dados para o EmailJS
     const templateParams = {
       to_name: formData.name,
@@ -501,9 +529,9 @@ Equipe Ctrl+Play
       message: emailContent.body,
       event_date: '31/05',
       event_time: emailContent.body.split('🕒 Horário: ')[1].split('\n')[0],
-      event_duration: headerDuration || '45 minutos',
+      event_duration: emailDuration,
       event_platform: 'Zoom',
-      event_link: headerLink || 'https://zoom.us/j/7705946111',
+      event_link: emailLink,
       events_list: eventsList || '',
       event_details: eventDetails || ''
     };
