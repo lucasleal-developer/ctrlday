@@ -329,7 +329,8 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay\n';
 
         // Texto exato conforme solicitado no arquivo instrucoesnovas.md
-        eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
+        eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay
+🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
  🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
@@ -481,9 +482,6 @@ Equipe Ctrl+Play
     setSending(true);
     setEmailError('');
 
-    // Gerar o conteúdo do email
-    const emailContent = generateEmailContent();
-
     // Verificar se o email está preenchido
     if (!formData.email || formData.email.trim() === '') {
       setEmailError('O endereço de email é obrigatório para enviar a confirmação.');
@@ -491,81 +489,229 @@ Equipe Ctrl+Play
       return;
     }
 
-    // Determinar duração e link com base nas seleções do usuário
+    // Determinar duração, link e conteúdo com base nas seleções do usuário
     let emailDuration = '45 minutos';
     let emailLink = 'https://zoom.us/j/7705946111';
+    let eventTime = '';
+    let eventsList = '';
+    let eventDetails = '';
 
-    // Links específicos para Kids
-    if (formData.isKid) {
-      if (formData.events.includes('piskel') || formData.events.includes('piskel_cosplay')) {
-        emailLink = 'https://zoom.us/j/99451475691';
-        emailDuration = '1h45';
-      } else if (formData.events.includes('cosplay')) {
-        emailLink = 'https://zoom.us/j/94176618702';
-        emailDuration = '1h';
-      }
+    // TEENS - Caso tenha selecionado Piskel + Cosplay
+    if (formData.isTeen && formData.events.includes('piskel_cosplay')) {
+      eventTime = '08h às 11h30';
+      emailLink = 'https://zoom.us/j/99658262515';
+      emailDuration = '1h45';
+      eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay';
+
+      eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay
+🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
+🕒 Duração: 1h45
+📍 Plataforma: Zoom
+
+🔗 Link de acesso: https://zoom.us/j/99658262515
+
+Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
+
+Todos os participantes devem compartilhar a tela durante toda a competição, enquanto apresentam seus projetos para o júri convidado. Os critérios de avaliação incluem:
+
+🔹 Seu Jeito de Criar - (Criatividade e Originalidade )
+ 🔹 Capricho na Criação - (Execução Técnica)
+ 🔹 Seguiu o Tema - (Adequação ao Tema Proposto)
+
+Após a produção, os professores irão solicitar os links dos projetos para registro e análise.
+
+ 📺 Tutorial obrigatório – Prepare-se para brilhar!
+ 👉 Assista ao tutorial sobre como acessar, utilizar o Piskel e criar seu projeto com qualidade:
+ 🔗 https://youtu.be/2fqA1fko2dU
+
+Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
+
+ Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a originalidade desses jovens criadores! 💜🚀
+
+🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 as 11h30
+🕒 Duração: 1h
+📍 Plataforma: Zoom
+🔗 Link de acesso: https://zoom.us/j/94176618702
+
+Chegou o momento mais divertido e animado do evento!
+No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
+
+🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
+
+ 📢 Votação aberta!
+Todos os participantes do evento poderão votar no cosplay que mais gostarem.
+Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
+
+🎓 Concurso de Cosplay dos Professores!
+Sim, eles também entram na brincadeira!
+Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.
+Mas aqui, só os alunos votam!
+Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑
+
+📸 Dica importante:
+Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
+Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
+
+Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
     }
-    // Links específicos para Teens
-    else if (formData.isTeen) {
-      if (formData.events.includes('piskel') || formData.events.includes('piskel_cosplay')) {
-        emailLink = 'https://zoom.us/j/99658262515';
-        emailDuration = '1h45';
-      } else if (formData.events.includes('voxel') || formData.events.includes('voxel_cosplay')) {
-        emailLink = 'https://zoom.us/j/92535159210';
-        emailDuration = '1h45';
-      } else if (formData.events.includes('cosplay')) {
-        emailLink = 'https://zoom.us/j/94176618702';
-        emailDuration = '1h';
-      }
+    // TEENS - Caso tenha selecionado Voxel + Cosplay
+    else if (formData.isTeen && formData.events.includes('voxel_cosplay')) {
+      eventTime = '08h às 11h30';
+      emailLink = 'https://zoom.us/j/92535159210';
+      emailDuration = '1h45';
+      eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay';
+
+      eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay
+🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
+ 🕒 Duração: 1h45
+📍 Plataforma: Zoom
+
+ 🔗 Link de acesso: https://zoom.us/j/92535159210
+
+Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
+Durante toda a competição, os alunos deverão manter o compartilhamento de tela ativo.
+
+A banca avaliadora irá julgar os trabalhos com base em:
+
+🔹 Seu Jeito de Criar - (Criatividade e Originalidade )
+🔹 Capricho na Criação - (Execução Técnica)
+🔹 Seguiu o Tema - (Adequação ao Tema Proposto)
+
+Os professores ficarão responsáveis por tirar prints das telas dos projetos apresentados.
+
+ 📺 Tutorial obrigatório – Prepare-se para brilhar!
+ 👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
+ 🔗 https://youtu.be/_0AFQzUspRc
+
+Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
+
+Prepare-se para ver mundos incríveis ganharem vida em voxel art — criatividade e técnica em 3D! 💜🚀
+
+🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 as 11h30
+🕒 Duração: 1h
+📍 Plataforma: Zoom
+🔗 Link de acesso: https://zoom.us/j/94176618702
+
+Chegou o momento mais divertido e animado do evento!
+No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
+
+🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
+
+ 📢 Votação aberta!
+Todos os participantes do evento poderão votar no cosplay que mais gostarem.
+Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
+
+🎓 Concurso de Cosplay dos Professores!
+Sim, eles também entram na brincadeira!
+Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.
+Mas aqui, só os alunos votam!
+Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑
+
+📸 Dica importante:
+Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
+Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
+
+Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
     }
+    // Outros casos - usar a função generateEmailContent
+    else {
+      const emailContent = generateEmailContent();
+      eventTime = emailContent.body.includes('🕒 Horário:') ? emailContent.body.split('🕒 Horário:')[1].split('\n')[0].trim() : '';
 
-    // Extrair informações do conteúdo do email
-    let emailEventsList = '';
-    let emailEventDetails = '';
+      // Links específicos para Kids
+      if (formData.isKid) {
+        if (formData.events.includes('piskel') || formData.events.includes('piskel_cosplay')) {
+          emailLink = 'https://zoom.us/j/99451475691';
+          emailDuration = '1h45';
+        } else if (formData.events.includes('cosplay')) {
+          emailLink = 'https://zoom.us/j/94176618702';
+          emailDuration = '1h';
+        }
+      }
+      // Links específicos para Teens
+      else if (formData.isTeen) {
+        if (formData.events.includes('piskel')) {
+          emailLink = 'https://zoom.us/j/99658262515';
+          emailDuration = '1h45';
+        } else if (formData.events.includes('voxel')) {
+          emailLink = 'https://zoom.us/j/92535159210';
+          emailDuration = '1h45';
+        } else if (formData.events.includes('cosplay')) {
+          emailLink = 'https://zoom.us/j/94176618702';
+          emailDuration = '1h';
+        }
+      }
 
-    if (emailContent.body.includes('Você está inscrito para:')) {
-      const parts = emailContent.body.split('Você está inscrito para:');
-      if (parts.length > 1) {
-        const afterEventsList = parts[1].trim().split('\n');
-        if (afterEventsList.length > 0) {
-          emailEventsList = afterEventsList[0].trim();
+      // Extrair a lista de eventos e detalhes do conteúdo do email
+      if (emailContent.body.includes('Você está inscrito para:')) {
+        const parts = emailContent.body.split('Você está inscrito para:');
+        if (parts.length > 1) {
+          const afterEventsList = parts[1].trim().split('\n');
+          if (afterEventsList.length > 0) {
+            eventsList = afterEventsList[0].trim();
 
-          // Extrair os detalhes do evento (tudo entre a lista de eventos e "Lembre-se de entrar")
-          if (afterEventsList.length > 1 && emailContent.body.includes('Lembre-se de entrar')) {
-            const detailsText = parts[1].split('Lembre-se de entrar')[0].trim();
-            // Remover a primeira linha (que é a lista de eventos)
-            emailEventDetails = detailsText.substring(emailEventsList.length).trim();
+            // Extrair os detalhes do evento (tudo entre a lista de eventos e "Lembre-se de entrar")
+            if (afterEventsList.length > 1 && emailContent.body.includes('Lembre-se de entrar')) {
+              const detailsText = parts[1].split('Lembre-se de entrar')[0].trim();
+              // Remover a primeira linha (que é a lista de eventos)
+              eventDetails = detailsText.substring(eventsList.length).trim();
+            }
           }
         }
       }
     }
 
+    // Gerar o corpo do email
+    const emailBody = `
+Olá ${formData.name},
+
+Sua inscrição para o CTRL+DAY foi confirmada com sucesso!
+
+Detalhes do evento:
+📅 Data: Sábado, 31/05
+🕒 Horário: ${eventTime}
+🕒 Duração: ${emailDuration}
+📍 Plataforma: Zoom
+🔗 Link de acesso: ${emailLink}
+
+Você está inscrito para:
+${eventsList}
+${eventDetails}
+
+Lembre-se de entrar na sala alguns minutos antes do início para testar seu áudio e vídeo.
+
+Estamos ansiosos para vê-lo no evento!
+
+Atenciosamente,
+Equipe Ctrl+Play
+    `;
+
     // Preparar os dados para o EmailJS
     const templateParams = {
       to_name: formData.name,
       to_email: formData.email,
-      email: formData.email, // Adicionando email como parâmetro alternativo
-      recipient: formData.email, // Adicionando recipient como parâmetro alternativo
-      subject: emailContent.subject,
-      message: emailContent.body,
+      email: formData.email,
+      recipient: formData.email,
+      subject: 'Confirmação de Inscrição - CTRL+DAY',
+      message: emailBody,
       event_date: '31/05',
-      event_time: emailContent.body.split('🕒 Horário: ')[1].split('\n')[0],
+      event_time: eventTime,
       event_duration: emailDuration,
       event_platform: 'Zoom',
       event_link: emailLink,
-      events_list: emailEventsList,
-      event_details: emailEventDetails
+      events_list: eventsList,
+      event_details: eventDetails
     };
 
     // Enviar o email usando EmailJS
     console.log('Enviando email com os parâmetros:', templateParams);
     console.log('Service ID:', 'service_hacz2wh');
-    console.log('Template ID:', 'template_5rq0zt9');
+    console.log('Template ID:', 'template_5rq02t9');
 
     // Usando o método mais recente com a chave pública explícita
     emailjs.send(
       'service_hacz2wh',
-      'template_5rq02t9',
+      'template_5rq02t9', // Corrigido para o ID correto
       templateParams,
       'lH5HG9dqpSBR_9_ID' // Chave pública explícita - verifique se está correta
     )
@@ -575,7 +721,10 @@ Equipe Ctrl+Play
       // Armazenar o conteúdo do email para exibir na tela de confirmação
       setFormData({
         ...formData,
-        emailContent: emailContent
+        emailContent: {
+          subject: 'Confirmação de Inscrição - CTRL+DAY',
+          body: emailBody
+        }
       });
 
       setSending(false);
