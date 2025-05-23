@@ -61,18 +61,10 @@ const RegistrationForm = () => {
   };
 
   const handleEventChange = (event) => {
-    const currentEvents = [...formData.events];
-    const eventIndex = currentEvents.indexOf(event);
-
-    if (eventIndex > -1) {
-      currentEvents.splice(eventIndex, 1);
-    } else {
-      currentEvents.push(event);
-    }
-
+    // Permitir apenas uma seleção
     setFormData({
       ...formData,
-      events: currentEvents
+      events: [event] // Substitui o array atual por um novo array contendo apenas o evento selecionado
     });
   };
 
@@ -874,7 +866,8 @@ Equipe Ctrl+Play
                           <>
                             <label className="flex items-start p-3 border-2 border-purple-200 rounded-lg hover:bg-purple-50 cursor-pointer">
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name="kidEvent"
                                 className="mt-1 mr-3"
                                 checked={formData.events.includes('piskel_cosplay')}
                                 onChange={() => handleEventChange('piskel_cosplay')}
@@ -887,7 +880,8 @@ Equipe Ctrl+Play
 
                             <label className="flex items-start p-3 border-2 border-purple-200 rounded-lg hover:bg-purple-50 cursor-pointer">
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name="kidEvent"
                                 className="mt-1 mr-3"
                                 checked={formData.events.includes('piskel')}
                                 onChange={() => handleEventChange('piskel')}
@@ -900,7 +894,8 @@ Equipe Ctrl+Play
 
                             <label className="flex items-start p-3 border-2 border-purple-200 rounded-lg hover:bg-purple-50 cursor-pointer">
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name="kidEvent"
                                 className="mt-1 mr-3"
                                 checked={formData.events.includes('cosplay')}
                                 onChange={() => handleEventChange('cosplay')}
@@ -917,7 +912,8 @@ Equipe Ctrl+Play
                           <>
                             <label className="flex items-start p-3 border-2 border-purple-200 rounded-lg hover:bg-purple-50 cursor-pointer">
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name="teenEvent"
                                 className="mt-1 mr-3"
                                 checked={formData.events.includes('piskel_cosplay')}
                                 onChange={() => handleEventChange('piskel_cosplay')}
@@ -930,7 +926,8 @@ Equipe Ctrl+Play
 
                             <label className="flex items-start p-3 border-2 border-purple-200 rounded-lg hover:bg-purple-50 cursor-pointer">
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name="teenEvent"
                                 className="mt-1 mr-3"
                                 checked={formData.events.includes('voxel_cosplay')}
                                 onChange={() => handleEventChange('voxel_cosplay')}
@@ -943,7 +940,8 @@ Equipe Ctrl+Play
 
                             <label className="flex items-start p-3 border-2 border-purple-200 rounded-lg hover:bg-purple-50 cursor-pointer">
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name="teenEvent"
                                 className="mt-1 mr-3"
                                 checked={formData.events.includes('piskel')}
                                 onChange={() => handleEventChange('piskel')}
@@ -956,7 +954,8 @@ Equipe Ctrl+Play
 
                             <label className="flex items-start p-3 border-2 border-purple-200 rounded-lg hover:bg-purple-50 cursor-pointer">
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name="teenEvent"
                                 className="mt-1 mr-3"
                                 checked={formData.events.includes('voxel')}
                                 onChange={() => handleEventChange('voxel')}
@@ -969,7 +968,8 @@ Equipe Ctrl+Play
 
                             <label className="flex items-start p-3 border-2 border-purple-200 rounded-lg hover:bg-purple-50 cursor-pointer">
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name="teenEvent"
                                 className="mt-1 mr-3"
                                 checked={formData.events.includes('cosplay')}
                                 onChange={() => handleEventChange('cosplay')}
