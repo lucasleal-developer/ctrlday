@@ -270,8 +270,9 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventTime = '08h às 11h30';
         eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay\n';
 
-        // Texto exato conforme solicitado no arquivo instrucoesnovas.md
-        eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
+        // Texto exato conforme solicitado pelo usuário
+        eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay
+🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
 🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
