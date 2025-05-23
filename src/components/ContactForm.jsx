@@ -337,8 +337,20 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
     }
     // Caso seja um responsável
     else if (formData.isParent) {
-      eventsList = '- Roda de conversa com equipe pedagógica - 08h30 às 09h45\n';
+      eventsList = '☕ Café com o Pedagógico - 08h30 às 09h45\n';
       eventTime = '08h30 às 09h45';
+      eventDetails = `Enquanto os alunos participam das atividades práticas, convidamos você, pai, mãe ou responsável, para um momento especial com a equipe pedagógica da Ctrl+Play.
+
+O Café com o Pedagógico é uma roda de conversa descontraída com a coordenação, gestão e professores convidados, pensada para aproximar ainda mais a família da nossa proposta educacional.
+Vamos conversar sobre temas importantes como:
+
+🔹 O que seu filho aprende na Ctrl+Play?
+🔹 Como a tecnologia impacta o futuro educacional?
+🔹 Relatos e histórias inspiradoras de alunos que crescem com a gente!
+
+Será uma excelente oportunidade para tirar dúvidas, conhecer mais sobre nosso trabalho e fortalecer essa parceria tão importante entre escola e família.
+
+Esperamos você com carinho! 💜🚀`;
     }
 
     // Determinar qual link mostrar no cabeçalho
