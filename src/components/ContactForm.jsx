@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const RegistrationForm = () => {
+  // Inicializar o EmailJS
+  useEffect(() => {
+    emailjs.init("lH5HG9dqpSBR_9_lD");
+  }, []);
+
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -154,12 +159,12 @@ Equipe Ctrl+Play
     };
 
     // Enviar o email usando EmailJS
-    // Substitua 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID' e 'YOUR_PUBLIC_KEY' pelos seus valores reais do EmailJS
+    console.log('Enviando email com os parâmetros:', templateParams);
+
     emailjs.send(
       'service_hacz2wh',
-      'template_5rq02t9',
-      templateParams,
-      'lH5HG9dqpSBR_9_ID'
+      'template_5rq0zt9', // Corrigido o ID do template
+      templateParams
     )
     .then((response) => {
       console.log('Email enviado com sucesso!', response);
@@ -175,7 +180,8 @@ Equipe Ctrl+Play
     })
     .catch((err) => {
       console.error('Erro ao enviar email:', err);
-      setEmailError('Ocorreu um erro ao enviar o email. Por favor, tente novamente.');
+      // Mensagem de erro mais detalhada
+      setEmailError(`Ocorreu um erro ao enviar o email: ${err.text || err.message || 'Erro desconhecido'}. Por favor, tente novamente.`);
       setSending(false);
     });
   };
