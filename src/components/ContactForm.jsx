@@ -83,13 +83,15 @@ const RegistrationForm = () => {
     let eventDetails = '';
 
     if (formData.isKid || formData.isTeen) {
-      // Caso tenha selecionado ambos Piskel e Cosplay
-      if (formData.events.includes('piskel_cosplay')) {
-        eventTime = '08h às 11h30';
-        eventsList = '🎨 Competição de Artes Digitais – Piskel Kids e Concurso de Cosplay\n';
+      // CATEGORIA KIDS (9 anos ou menos)
+      if (formData.isKid) {
+        // Caso tenha selecionado ambos Piskel e Cosplay
+        if (formData.events.includes('piskel_cosplay')) {
+          eventTime = '08h às 11h30';
+          eventsList = '🎨 Competição de Artes Digitais – Piskel Kids e Concurso de Cosplay\n';
 
-        // Detalhes do Piskel
-        eventDetails += `🎨 Competição de Artes Digitais – Piskel Kids - 08h às 9:45h
+          // Detalhes do Piskel
+          eventDetails += `🎨 Competição de Artes Digitais – Piskel Kids - 08h às 9:45h
 🕒 Duração: 1h45
 📍 Plataforma: Zoom
 🔗 Link de acesso: https://zoom.us/j/99451475691
@@ -113,8 +115,8 @@ Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas d
 
 Prepare-se para uma mostra cheia de talento, ideias incríveis e muita diversão! 💜🚀\n\n`;
 
-        // Detalhes do Cosplay
-        eventDetails += `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
+          // Detalhes do Cosplay
+          eventDetails += `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
 🕒 Duração: 1h
 📍 Plataforma: Zoom
 🔗 Link de acesso: https://zoom.us/j/94176618702
@@ -139,13 +141,13 @@ Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
 Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
 
 Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
-      }
-      // Caso tenha selecionado apenas Piskel
-      else if (formData.events.includes('piskel')) {
-        eventTime = '08h às 9:45h';
-        eventsList = '🎨 Competição de Artes Digitais – Piskel Kids\n';
+        }
+        // Caso tenha selecionado apenas Piskel
+        else if (formData.events.includes('piskel')) {
+          eventTime = '08h às 9:45h';
+          eventsList = '🎨 Competição de Artes Digitais – Piskel Kids\n';
 
-        eventDetails = `🎨 Competição de Artes Digitais – Piskel Kids - 08h às 9:45h
+          eventDetails = `🎨 Competição de Artes Digitais – Piskel Kids - 08h às 9:45h
 🕒 Duração: 1h45
 📍 Plataforma: Zoom
 🔗 Link de acesso: https://zoom.us/j/99451475691
@@ -166,9 +168,222 @@ Os professores irão coletar os links das criações dos alunos e acompanhar de 
  🔗 https://youtu.be/2fqA1fko2dU
 
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!`;
+        }
       }
-      // Caso tenha selecionado apenas Cosplay
-      else if (formData.events.includes('cosplay')) {
+      // CATEGORIA TEENS (10 anos ou mais)
+      else if (formData.isTeen) {
+        // Caso tenha selecionado Piskel
+        if (formData.events.includes('piskel') && !formData.events.includes('piskel_cosplay')) {
+          eventTime = '08h às 9:45h';
+          eventsList = '🎨 Competição de Artes Digitais – Piskel Teens\n';
+
+          eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h às 9:45h
+🕒 Duração: 1h45
+📍 Plataforma: Zoom
+
+🔗 Link de acesso: https://zoom.us/j/99658262515
+
+Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
+
+Todos os participantes devem compartilhar a tela durante toda a competição, enquanto apresentam seus projetos para o júri convidado. Os critérios de avaliação incluem:
+
+🔹 Seu Jeito de Criar - (Criatividade e Originalidade )
+🔹 Capricho na Criação - (Execução Técnica)
+🔹 Seguiu o Tema - (Adequação ao Tema Proposto)
+
+Após a produção, os professores irão solicitar os links dos projetos para registro e análise.
+
+📺 Tutorial obrigatório – Prepare-se para brilhar!
+👉 Assista ao tutorial sobre como acessar, utilizar o Piskel e criar seu projeto com qualidade:
+🔗 https://youtu.be/2fqA1fko2dU
+
+Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
+
+Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a originalidade desses jovens criadores! 💜🚀`;
+        }
+
+        // Caso tenha selecionado MagicaVoxel
+        else if (formData.events.includes('voxel') && !formData.events.includes('voxel_cosplay')) {
+          eventTime = '08h às 9:45h';
+          eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel\n';
+
+          eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h às 9:45h
+🕒 Duração: 1h45
+📍 Plataforma: Zoom
+
+🔗 Link de acesso: https://zoom.us/j/92535159210
+
+Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
+Durante toda a competição, os alunos deverão manter o compartilhamento de tela ativo.
+
+A banca avaliadora irá julgar os trabalhos com base em:
+
+🔹 Seu Jeito de Criar - (Criatividade e Originalidade )
+🔹 Capricho na Criação - (Execução Técnica)
+🔹 Seguiu o Tema - (Adequação ao Tema Proposto)
+
+Os professores ficarão responsáveis por tirar prints das telas dos projetos apresentados.
+
+📺 Tutorial obrigatório – Prepare-se para brilhar!
+👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
+🔗 https://youtu.be/_0AFQzUspRc
+
+Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
+
+Prepare-se para ver mundos incríveis ganharem vida em voxel art — criatividade e técnica em 3D! 💜🚀`;
+        }
+
+        // Caso tenha selecionado Cosplay
+        else if (formData.events.includes('cosplay') && !formData.events.includes('piskel_cosplay') && !formData.events.includes('voxel_cosplay')) {
+          eventTime = '10h30 às 11h30';
+          eventsList = '🧙‍♂️ Concurso de Cosplay – Show de Criatividade!\n';
+
+          eventDetails = `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
+🕒 Duração: 1h
+📍 Plataforma: Zoom
+🔗 Link de acesso: https://zoom.us/j/94176618702
+
+Chegou o momento mais divertido e animado do evento!
+No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
+
+🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
+
+📢 Votação aberta!
+Todos os participantes do evento poderão votar no cosplay que mais gostarem.
+Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
+
+🎓 Concurso de Cosplay dos Professores!
+Sim, eles também entram na brincadeira!
+Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.
+Mas aqui, só os alunos votam!
+Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑
+
+📸 Dica importante:
+Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
+Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
+
+Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
+        }
+      }
+      // TEENS - Caso tenha selecionado Piskel + Cosplay
+      else if (formData.isTeen && formData.events.includes('piskel_cosplay')) {
+        eventTime = '08h às 11h30';
+        eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay\n';
+
+        // Detalhes do Piskel Teens
+        eventDetails += `🎨 Competição de Artes Digitais – Piskel Teens - 08h às 9:45h
+🕒 Duração: 1h45
+📍 Plataforma: Zoom
+
+🔗 Link de acesso: https://zoom.us/j/99658262515
+
+Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
+
+Todos os participantes devem compartilhar a tela durante toda a competição, enquanto apresentam seus projetos para o júri convidado. Os critérios de avaliação incluem:
+
+🔹 Seu Jeito de Criar - (Criatividade e Originalidade )
+🔹 Capricho na Criação - (Execução Técnica)
+🔹 Seguiu o Tema - (Adequação ao Tema Proposto)
+
+Após a produção, os professores irão solicitar os links dos projetos para registro e análise.
+
+📺 Tutorial obrigatório – Prepare-se para brilhar!
+👉 Assista ao tutorial sobre como acessar, utilizar o Piskel e criar seu projeto com qualidade:
+🔗 https://youtu.be/2fqA1fko2dU
+
+Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
+
+Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a originalidade desses jovens criadores! 💜🚀\n\n`;
+
+        // Detalhes do Cosplay
+        eventDetails += `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
+🕒 Duração: 1h
+📍 Plataforma: Zoom
+🔗 Link de acesso: https://zoom.us/j/94176618702
+
+Chegou o momento mais divertido e animado do evento!
+No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
+
+🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
+
+📢 Votação aberta!
+Todos os participantes do evento poderão votar no cosplay que mais gostarem.
+Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
+
+🎓 Concurso de Cosplay dos Professores!
+Sim, eles também entram na brincadeira!
+Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.
+Mas aqui, só os alunos votam!
+Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑
+
+📸 Dica importante:
+Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
+Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
+
+Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
+      }
+
+      // TEENS - Caso tenha selecionado Voxel + Cosplay
+      else if (formData.isTeen && formData.events.includes('voxel_cosplay')) {
+        eventTime = '08h às 11h30';
+        eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay\n';
+
+        // Detalhes do MagicaVoxel
+        eventDetails += `🧊 Competição de Artes Digitais – MagicaVoxel - 08h às 9:45h
+🕒 Duração: 1h45
+📍 Plataforma: Zoom
+
+🔗 Link de acesso: https://zoom.us/j/92535159210
+
+Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
+Durante toda a competição, os alunos deverão manter o compartilhamento de tela ativo.
+
+A banca avaliadora irá julgar os trabalhos com base em:
+
+🔹 Seu Jeito de Criar - (Criatividade e Originalidade )
+🔹 Capricho na Criação - (Execução Técnica)
+🔹 Seguiu o Tema - (Adequação ao Tema Proposto)
+
+Os professores ficarão responsáveis por tirar prints das telas dos projetos apresentados.
+
+📺 Tutorial obrigatório – Prepare-se para brilhar!
+👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
+🔗 https://youtu.be/_0AFQzUspRc
+
+Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
+
+Prepare-se para ver mundos incríveis ganharem vida em voxel art — criatividade e técnica em 3D! 💜🚀\n\n`;
+
+        // Detalhes do Cosplay
+        eventDetails += `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
+🕒 Duração: 1h
+📍 Plataforma: Zoom
+🔗 Link de acesso: https://zoom.us/j/94176618702
+
+Chegou o momento mais divertido e animado do evento!
+No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
+
+🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
+
+📢 Votação aberta!
+Todos os participantes do evento poderão votar no cosplay que mais gostarem.
+Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
+
+🎓 Concurso de Cosplay dos Professores!
+Sim, eles também entram na brincadeira!
+Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.
+Mas aqui, só os alunos votam!
+Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑
+
+📸 Dica importante:
+Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
+Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
+
+Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
+      }
+
+      // KIDS - Caso tenha selecionado apenas Cosplay
+      else if (formData.isKid && formData.events.includes('cosplay')) {
         eventTime = '10h30 às 11h30';
         eventsList = '🧙‍♂️ Concurso de Cosplay – Show de Criatividade!\n';
 
@@ -196,18 +411,6 @@ Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Profess
  Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
 Isso ajuda a mostrar melhor cada detalhe do seu cosplay!`;
       }
-      // Outros casos (Voxel, etc.)
-      else {
-        if (formData.events.includes('voxel_cosplay')) {
-          eventsList += '- Concurso de Magica Voxel (Voxel Arte) - 08h às 9:45h\n';
-          eventsList += '- Concurso de Cosplay - 10h30 às 11h30\n';
-          eventTime = '08h às 11h30';
-        }
-        if (formData.events.includes('voxel')) {
-          eventsList += '- Concurso de Magica Voxel (Voxel Arte) - 08h às 9:45h\n';
-          eventTime = eventTime || '08h às 9:45h';
-        }
-      }
     }
     // Caso seja um responsável
     else if (formData.isParent) {
@@ -219,12 +422,28 @@ Isso ajuda a mostrar melhor cada detalhe do seu cosplay!`;
     let headerLink = 'https://zoom.us/j/7705946111'; // Link padrão
     let headerDuration = '45 minutos'; // Duração padrão
 
-    if (formData.events.includes('piskel') || formData.events.includes('piskel_cosplay')) {
-      headerLink = 'https://zoom.us/j/99451475691';
-      headerDuration = '1h45';
-    } else if (formData.events.includes('cosplay')) {
-      headerLink = 'https://zoom.us/j/94176618702';
-      headerDuration = '1h';
+    // Links específicos para Kids
+    if (formData.isKid) {
+      if (formData.events.includes('piskel') || formData.events.includes('piskel_cosplay')) {
+        headerLink = 'https://zoom.us/j/99451475691';
+        headerDuration = '1h45';
+      } else if (formData.events.includes('cosplay')) {
+        headerLink = 'https://zoom.us/j/94176618702';
+        headerDuration = '1h';
+      }
+    }
+    // Links específicos para Teens
+    else if (formData.isTeen) {
+      if (formData.events.includes('piskel') || formData.events.includes('piskel_cosplay')) {
+        headerLink = 'https://zoom.us/j/99658262515';
+        headerDuration = '1h45';
+      } else if (formData.events.includes('voxel') || formData.events.includes('voxel_cosplay')) {
+        headerLink = 'https://zoom.us/j/92535159210';
+        headerDuration = '1h45';
+      } else if (formData.events.includes('cosplay')) {
+        headerLink = 'https://zoom.us/j/94176618702';
+        headerDuration = '1h';
+      }
     }
 
     return {
