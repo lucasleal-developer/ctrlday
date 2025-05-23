@@ -5,7 +5,9 @@ import emailjs from '@emailjs/browser';
 const RegistrationForm = () => {
   // Inicializar o EmailJS
   useEffect(() => {
+    // Corrigido para a chave pública correta
     emailjs.init("lH5HG9dqpSBR_9_lD");
+    console.log("EmailJS inicializado");
   }, []);
 
   const [step, setStep] = useState(1);
@@ -160,11 +162,15 @@ Equipe Ctrl+Play
 
     // Enviar o email usando EmailJS
     console.log('Enviando email com os parâmetros:', templateParams);
+    console.log('Service ID:', 'service_hacz2wh');
+    console.log('Template ID:', 'template_5rq0zt9');
 
+    // Usando o método mais recente com a chave pública explícita
     emailjs.send(
       'service_hacz2wh',
-      'template_5rq0zt9', // Corrigido o ID do template
-      templateParams
+      'template_5rq0zt9',
+      templateParams,
+      'lH5HG9dqpSBR_9_lD' // Chave pública explícita - verifique se está correta
     )
     .then((response) => {
       console.log('Email enviado com sucesso!', response);
