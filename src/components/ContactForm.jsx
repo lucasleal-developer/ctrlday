@@ -501,9 +501,11 @@ Equipe Ctrl+Play
       message: emailContent.body,
       event_date: '31/05',
       event_time: emailContent.body.split('🕒 Horário: ')[1].split('\n')[0],
-      event_duration: '45 minutos',
+      event_duration: headerDuration || '45 minutos',
       event_platform: 'Zoom',
-      event_link: 'https://zoom.us/j/7705946111'
+      event_link: headerLink || 'https://zoom.us/j/7705946111',
+      events_list: eventsList || '',
+      event_details: eventDetails || ''
     };
 
     // Enviar o email usando EmailJS
