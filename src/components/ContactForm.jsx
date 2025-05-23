@@ -271,8 +271,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay\n';
 
         // Texto exato conforme solicitado pelo usuário
-        eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay
-🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
+        eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
 🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
@@ -329,8 +328,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay\n';
 
         // Texto exato conforme solicitado no arquivo instrucoesnovas.md
-        eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay
-🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
+        eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
  🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
@@ -503,8 +501,7 @@ Equipe Ctrl+Play
       emailDuration = '1h45';
       eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay';
 
-      eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay
-🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
+      eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
 🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
@@ -561,8 +558,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
       emailDuration = '1h45';
       eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay';
 
-      eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay
-🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
+      eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
  🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
