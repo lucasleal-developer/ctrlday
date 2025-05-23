@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 const RegistrationForm = () => {
   // Inicializar o EmailJS
@@ -442,6 +443,43 @@ Equipe Ctrl+Play
     let eventsList = '';
     let eventDetails = '';
 
+    // Preparar dados para o Google Sheets
+    let categoria = '';
+    if (formData.isKid) {
+      categoria = '9 anos ou menos - Kids';
+    } else if (formData.isTeen) {
+      categoria = '10 anos ou mais - Teens ou Young';
+    } else if (formData.isParent) {
+      categoria = 'Responsável';
+    }
+
+    // Determinar o nome do evento selecionado
+    let eventoSelecionado = '';
+    if (formData.events.length > 0) {
+      const evento = formData.events[0];
+      if (evento === 'piskel') {
+        eventoSelecionado = 'Concurso de Piskel (Pixel Arte)';
+      } else if (evento === 'cosplay') {
+        eventoSelecionado = 'Concurso de Cosplay';
+      } else if (evento === 'voxel') {
+        eventoSelecionado = 'Concurso de Magica Voxel (Voxel Arte)';
+      } else if (evento === 'piskel_cosplay') {
+        eventoSelecionado = 'Concurso de Piskel (Pixel Arte) e Concurso de Cosplay';
+      } else if (evento === 'voxel_cosplay') {
+        eventoSelecionado = 'Concurso de Magica Voxel (Voxel Arte) e Concurso de Cosplay';
+      }
+    } else if (formData.isParent) {
+      eventoSelecionado = 'Café com o Pedagógico';
+    }
+
+    // Dados para enviar ao Google Sheets
+    const sheetData = {
+      Nome: formData.name,
+      Email: formData.email,
+      Idade: categoria,
+      Evento: eventoSelecionado
+    };
+
     // TEENS - Caso tenha selecionado Piskel + Cosplay
     if (formData.isTeen && formData.events.includes('piskel_cosplay')) {
       eventTime = '08h às 11h30';
@@ -690,6 +728,18 @@ Equipe Ctrl+Play
     )
     .then((response) => {
       console.log('Email enviado com sucesso!', response);
+
+      // Enviar dados para o Google Sheets
+      // Substitua a URL abaixo pela URL da sua conexão do Sheet.best
+      const SHEET_BEST_URL = 'https://sheet.best/api/sheets/SEU_ID_AQUI';
+
+      axios.post(SHEET_BEST_URL, sheetData)
+        .then(sheetResponse => {
+          console.log('Dados enviados para o Google Sheets com sucesso!', sheetResponse);
+        })
+        .catch(sheetError => {
+          console.error('Erro ao enviar dados para o Google Sheets:', sheetError);
+        });
 
       // Armazenar o conteúdo do email para exibir na tela de confirmação
       setFormData({
