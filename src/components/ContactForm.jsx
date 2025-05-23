@@ -147,10 +147,19 @@ Equipe Ctrl+Play
     // Gerar o conteúdo do email
     const emailContent = generateEmailContent();
 
+    // Verificar se o email está preenchido
+    if (!formData.email || formData.email.trim() === '') {
+      setEmailError('O endereço de email é obrigatório para enviar a confirmação.');
+      setSending(false);
+      return;
+    }
+
     // Preparar os dados para o EmailJS
     const templateParams = {
       to_name: formData.name,
       to_email: formData.email,
+      email: formData.email, // Adicionando email como parâmetro alternativo
+      recipient: formData.email, // Adicionando recipient como parâmetro alternativo
       subject: emailContent.subject,
       message: emailContent.body,
       event_date: '31/05',
