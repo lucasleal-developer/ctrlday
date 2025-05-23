@@ -461,8 +461,6 @@ Detalhes do evento:
 ${formData.isParent ? 'Você está inscrito para:' : 'Você está inscrito para:'}
 ${eventsList.replace('\n', '')}
 
-${eventDetails}
-
 Lembre-se de entrar na sala alguns minutos antes do início para testar seu áudio e vídeo.
 
 Estamos ansiosos para vê-lo no evento!
@@ -673,8 +671,6 @@ Detalhes do evento:
 
 Você está inscrito para:
 ${eventsList.replace('\n', '')}
-
-${eventDetails}
 
 Lembre-se de entrar na sala alguns minutos antes do início para testar seu áudio e vídeo.
 
