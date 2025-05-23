@@ -270,7 +270,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventTime = '08h às 11h30';
         eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay\n';
 
-        // Texto exato conforme solicitado
+        // Texto exato conforme solicitado no arquivo instrucoesnovas.md
         eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
 🕒 Duração: 1h45
 📍 Plataforma: Zoom
@@ -282,18 +282,18 @@ Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em p
 Todos os participantes devem compartilhar a tela durante toda a competição, enquanto apresentam seus projetos para o júri convidado. Os critérios de avaliação incluem:
 
 🔹 Seu Jeito de Criar - (Criatividade e Originalidade )
-🔹 Capricho na Criação - (Execução Técnica)
-🔹 Seguiu o Tema - (Adequação ao Tema Proposto)
+ 🔹 Capricho na Criação - (Execução Técnica)
+ 🔹 Seguiu o Tema - (Adequação ao Tema Proposto)
 
 Após a produção, os professores irão solicitar os links dos projetos para registro e análise.
 
-📺 Tutorial obrigatório – Prepare-se para brilhar!
-👉 Assista ao tutorial sobre como acessar, utilizar o Piskel e criar seu projeto com qualidade:
-🔗 https://youtu.be/2fqA1fko2dU
+ 📺 Tutorial obrigatório – Prepare-se para brilhar!
+ 👉 Assista ao tutorial sobre como acessar, utilizar o Piskel e criar seu projeto com qualidade:
+ 🔗 https://youtu.be/2fqA1fko2dU
 
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
 
-Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a originalidade desses jovens criadores! 💜🚀
+ Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a originalidade desses jovens criadores! 💜🚀
 
 🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 as 11h30
 🕒 Duração: 1h
@@ -305,7 +305,7 @@ No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jo
 
 🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
 
-📢 Votação aberta!
+ 📢 Votação aberta!
 Todos os participantes do evento poderão votar no cosplay que mais gostarem.
 Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
 
@@ -327,12 +327,12 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventTime = '08h às 11h30';
         eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay\n';
 
-        // Texto exato conforme solicitado
+        // Texto exato conforme solicitado no arquivo instrucoesnovas.md
         eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
-🕒 Duração: 1h45
+ 🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
-🔗 Link de acesso: https://zoom.us/j/92535159210
+ 🔗 Link de acesso: https://zoom.us/j/92535159210
 
 Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
 Durante toda a competição, os alunos deverão manter o compartilhamento de tela ativo.
@@ -345,9 +345,9 @@ A banca avaliadora irá julgar os trabalhos com base em:
 
 Os professores ficarão responsáveis por tirar prints das telas dos projetos apresentados.
 
-📺 Tutorial obrigatório – Prepare-se para brilhar!
-👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
-🔗 https://youtu.be/_0AFQzUspRc
+ 📺 Tutorial obrigatório – Prepare-se para brilhar!
+ 👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
+ 🔗 https://youtu.be/_0AFQzUspRc
 
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
 
@@ -363,7 +363,7 @@ No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jo
 
 🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
 
-📢 Votação aberta!
+ 📢 Votação aberta!
 Todos os participantes do evento poderão votar no cosplay que mais gostarem.
 Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
 
