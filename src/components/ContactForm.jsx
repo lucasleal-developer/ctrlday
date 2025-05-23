@@ -328,27 +328,6 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
       else if (formData.isKid && formData.events.includes('cosplay')) {
         eventTime = '10h30 às 11h30';
         eventsList = '🧙‍♂️ Concurso de Cosplay – Show de Criatividade!\n';
-
-        eventDetails = `Chegou o momento mais divertido e animado do evento!
-No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
-
-🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
-
-📢 Votação aberta!
-Todos os participantes do evento poderão votar no cosplay que mais gostarem.
-Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
-
-🎓 Concurso de Cosplay dos Professores!
-Sim, eles também entram na brincadeira!
-Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.
-Mas aqui, só os alunos votam!
-Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑
-
-📸 Dica importante:
-Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
-Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
-
-Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
       }
     }
     // Caso seja um responsável
@@ -385,17 +364,20 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
       }
     }
 
-    // Processar eventDetails para remover a parte inicial (nome, duração, plataforma, link)
-    let processedDetails = '';
+    // Remover cabeçalhos duplicados do eventDetails se necessário
     if (eventDetails) {
-      // Encontrar a posição do link de acesso
-      const linkPos = eventDetails.indexOf('Link de acesso:');
-      if (linkPos !== -1) {
-        // Encontrar a próxima quebra de linha após o link
-        const nextLinePos = eventDetails.indexOf('\n\n', linkPos);
-        if (nextLinePos !== -1) {
-          // Pegar apenas o conteúdo após o link
-          processedDetails = eventDetails.substring(nextLinePos + 2);
+      // Verificar se o eventDetails começa com informações de cabeçalho
+      const headerPattern = /^🧙‍♂️|^🎨|^🧊/;
+      if (headerPattern.test(eventDetails)) {
+        // Encontrar a posição do link de acesso
+        const linkPos = eventDetails.indexOf('Link de acesso:');
+        if (linkPos !== -1) {
+          // Encontrar a próxima quebra de linha após o link
+          const nextLinePos = eventDetails.indexOf('\n\n', linkPos);
+          if (nextLinePos !== -1) {
+            // Pegar apenas o conteúdo após o link
+            eventDetails = eventDetails.substring(nextLinePos + 2);
+          }
         }
       }
     }
@@ -548,6 +530,34 @@ Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
 
 Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
     }
+    // KIDS - Caso tenha selecionado apenas Cosplay
+    else if (formData.isKid && formData.events.includes('cosplay')) {
+      eventTime = '10h30 às 11h30';
+      emailLink = 'https://zoom.us/j/94176618702';
+      emailDuration = '1h';
+      eventsList = '🧙‍♂️ Concurso de Cosplay – Show de Criatividade!';
+
+      eventDetails = `Chegou o momento mais divertido e animado do evento!
+No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
+
+🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
+
+📢 Votação aberta!
+Todos os participantes do evento poderão votar no cosplay que mais gostarem.
+Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
+
+🎓 Concurso de Cosplay dos Professores!
+Sim, eles também entram na brincadeira!
+Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.
+Mas aqui, só os alunos votam!
+Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑
+
+📸 Dica importante:
+Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
+Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
+
+Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
+    }
     // Outros casos - usar a função generateEmailContent
     else {
       const emailContent = generateEmailContent();
@@ -596,17 +606,20 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
       }
     }
 
-    // Processar eventDetails para remover a parte inicial (nome, duração, plataforma, link)
-    let processedDetails = '';
+    // Remover cabeçalhos duplicados do eventDetails se necessário
     if (eventDetails) {
-      // Encontrar a posição do link de acesso
-      const linkPos = eventDetails.indexOf('Link de acesso:');
-      if (linkPos !== -1) {
-        // Encontrar a próxima quebra de linha após o link
-        const nextLinePos = eventDetails.indexOf('\n\n', linkPos);
-        if (nextLinePos !== -1) {
-          // Pegar apenas o conteúdo após o link
-          processedDetails = eventDetails.substring(nextLinePos + 2);
+      // Verificar se o eventDetails começa com informações de cabeçalho
+      const headerPattern = /^🧙‍♂️|^🎨|^🧊/;
+      if (headerPattern.test(eventDetails)) {
+        // Encontrar a posição do link de acesso
+        const linkPos = eventDetails.indexOf('Link de acesso:');
+        if (linkPos !== -1) {
+          // Encontrar a próxima quebra de linha após o link
+          const nextLinePos = eventDetails.indexOf('\n\n', linkPos);
+          if (nextLinePos !== -1) {
+            // Pegar apenas o conteúdo após o link
+            eventDetails = eventDetails.substring(nextLinePos + 2);
+          }
         }
       }
     }
