@@ -177,13 +177,7 @@ Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas d
           eventTime = '08h às 9:45h';
           eventsList = '🎨 Competição de Artes Digitais – Piskel Teens\n';
 
-          eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h às 9:45h
-🕒 Duração: 1h45
-📍 Plataforma: Zoom
-
-🔗 Link de acesso: https://zoom.us/j/99658262515
-
-Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
+          eventDetails = `Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
 Todos os participantes devem compartilhar a tela durante toda a competição, enquanto apresentam seus projetos para o júri convidado. Os critérios de avaliação incluem:
 
 • Seu Jeito de Criar - (Criatividade e Originalidade)
@@ -270,13 +264,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay\n';
 
         // Texto exato conforme solicitado pelo usuário
-        eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
-🕒 Duração: 1h45
-📍 Plataforma: Zoom
-
-🔗 Link de acesso: https://zoom.us/j/99658262515
-
-Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
+        eventDetails = `Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
 Todos os participantes devem compartilhar a tela durante toda a competição, enquanto apresentam seus projetos para o júri convidado. Os critérios de avaliação incluem:
 
 • Seu Jeito de Criar - (Criatividade e Originalidade)
@@ -515,13 +503,7 @@ Equipe Ctrl+Play
       emailDuration = '1h45';
       eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay';
 
-      eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
-🕒 Duração: 1h45
-📍 Plataforma: Zoom
-
-🔗 Link de acesso: https://zoom.us/j/99658262515
-
-Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
+      eventDetails = `Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!
 Todos os participantes devem compartilhar a tela durante toda a competição, enquanto apresentam seus projetos para o júri convidado. Os critérios de avaliação incluem:
 
 • Seu Jeito de Criar - (Criatividade e Originalidade)
