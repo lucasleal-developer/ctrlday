@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 const Schedule = () => {
   const scheduleItems = [
     {
-      time: "08h00 às 09h15",
+      time: "08h00 às 09h45",
       title: "Competições de Piskel e Magica Voxel",
       description: "Mostre seu talento criando pixel art e modelos 3D voxel!",
       icon: "🎨",
       color: "bg-blue-100 border-blue-400 text-blue-700"
     },
     {
-      time: "08h30 às 09h45",
+      time: "08h30 às 09h15",
       title: "Roda de conversa com equipe pedagógica",
       description: "Momento especial para pais e responsáveis conhecerem mais sobre nossa proposta educacional.",
       icon: "☕",
