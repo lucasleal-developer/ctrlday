@@ -442,8 +442,20 @@ Isso ajuda a mostrar melhor cada detalhe do seu cosplay!`;
       }
     }
 
-    // Não processar eventDetails, usar diretamente
-    let processedDetails = eventDetails;
+    // Processar eventDetails para remover a parte inicial (nome, duração, plataforma, link)
+    let processedDetails = '';
+    if (eventDetails) {
+      // Encontrar a posição do link de acesso
+      const linkPos = eventDetails.indexOf('Link de acesso:');
+      if (linkPos !== -1) {
+        // Encontrar a próxima quebra de linha após o link
+        const nextLinePos = eventDetails.indexOf('\n\n', linkPos);
+        if (nextLinePos !== -1) {
+          // Pegar apenas o conteúdo após o link
+          processedDetails = eventDetails.substring(nextLinePos + 2);
+        }
+      }
+    }
 
     return {
       subject: 'Confirmação de Inscrição - CTRL+DAY',
@@ -658,8 +670,20 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
       }
     }
 
-    // Não processar eventDetails, usar diretamente
-    let processedDetails = eventDetails;
+    // Processar eventDetails para remover a parte inicial (nome, duração, plataforma, link)
+    let processedDetails = '';
+    if (eventDetails) {
+      // Encontrar a posição do link de acesso
+      const linkPos = eventDetails.indexOf('Link de acesso:');
+      if (linkPos !== -1) {
+        // Encontrar a próxima quebra de linha após o link
+        const nextLinePos = eventDetails.indexOf('\n\n', linkPos);
+        if (nextLinePos !== -1) {
+          // Pegar apenas o conteúdo após o link
+          processedDetails = eventDetails.substring(nextLinePos + 2);
+        }
+      }
+    }
 
     // Gerar o corpo do email
     const emailBody = `
