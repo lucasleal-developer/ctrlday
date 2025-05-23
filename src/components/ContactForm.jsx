@@ -225,12 +225,7 @@ Prepare-se para ver mundos incríveis ganharem vida em voxel art — criatividad
           eventTime = '10h30 às 11h30';
           eventsList = '🧙‍♂️ Concurso de Cosplay – Show de Criatividade!\n';
 
-          eventDetails = `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
-🕒 Duração: 1h
-📍 Plataforma: Zoom
-🔗 Link de acesso: https://zoom.us/j/94176618702
-
-Chegou o momento mais divertido e animado do evento!
+          eventDetails = `Chegou o momento mais divertido e animado do evento!
 No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
 
 🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
@@ -274,11 +269,6 @@ Após a produção, os professores irão solicitar os links dos projetos para re
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
 
 Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a originalidade desses jovens criadores! 💜🚀
-
-🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 as 11h30
-🕒 Duração: 1h
-📍 Plataforma: Zoom
-🔗 Link de acesso: https://zoom.us/j/94176618702
 
 Chegou o momento mais divertido e animado do evento!
 No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
@@ -327,11 +317,6 @@ Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas d
 
 Prepare-se para ver mundos incríveis ganharem vida em voxel art — criatividade e técnica em 3D! 💜🚀
 
-🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 as 11h30
-🕒 Duração: 1h
-📍 Plataforma: Zoom
-🔗 Link de acesso: https://zoom.us/j/94176618702
-
 Chegou o momento mais divertido e animado do evento!
 No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
 
@@ -359,12 +344,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventTime = '10h30 às 11h30';
         eventsList = '🧙‍♂️ Concurso de Cosplay – Show de Criatividade!\n';
 
-        eventDetails = `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
-🕒 Duração: 1h
-📍 Plataforma: Zoom
-🔗 Link de acesso: https://zoom.us/j/94176618702
-
-Chegou o momento mais divertido e animado do evento!
+        eventDetails = `Chegou o momento mais divertido e animado do evento!
 No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
 
 🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
@@ -559,11 +539,6 @@ Os professores ficarão responsáveis por tirar prints das telas dos projetos ap
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
 
 Prepare-se para ver mundos incríveis ganharem vida em voxel art — criatividade e técnica em 3D! 💜🚀
-
-🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 as 11h30
-🕒 Duração: 1h
-📍 Plataforma: Zoom
-🔗 Link de acesso: https://zoom.us/j/94176618702
 
 Chegou o momento mais divertido e animado do evento!
 No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!
