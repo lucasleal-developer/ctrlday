@@ -730,8 +730,7 @@ Equipe Ctrl+Play
       console.log('Email enviado com sucesso!', response);
 
       // Enviar dados para o Google Sheets
-      // Substitua a URL abaixo pela URL da sua conexão do Sheet.best
-      const SHEET_BEST_URL = 'https://sheet.best/api/sheets/SEU_ID_AQUI';
+      const SHEET_BEST_URL = 'https://api.sheetbest.com/sheets/a7036743-176d-4e8f-b35d-ccf2ed5b9ebe';
 
       axios.post(SHEET_BEST_URL, sheetData)
         .then(sheetResponse => {
