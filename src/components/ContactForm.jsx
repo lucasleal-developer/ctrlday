@@ -334,19 +334,21 @@ No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jo
 
 🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!
 
- 📢 Votação aberta!
- Todos os participantes do evento poderão votar no cosplay que mais gostarem.
+📢 Votação aberta!
+Todos os participantes do evento poderão votar no cosplay que mais gostarem.
 Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨
 
- 🎓 Concurso de Cosplay dos Professores!
- Sim, eles também entram na brincadeira!
+🎓 Concurso de Cosplay dos Professores!
+Sim, eles também entram na brincadeira!
 Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.
 Mas aqui, só os alunos votam!
 Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑
 
 📸 Dica importante:
- Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
-Isso ajuda a mostrar melhor cada detalhe do seu cosplay!`;
+Arrume bem a iluminação e o espaço onde vai aparecer na câmera.
+Isso ajuda a mostrar melhor cada detalhe do seu cosplay!
+
+Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, professores e personagens incríveis! 💜🚀`;
       }
     }
     // Caso seja um responsável
@@ -876,26 +878,6 @@ Equipe Ctrl+Play
                               <div>
                                 <span className="font-medium">Concurso de Cosplay</span>
                                 <p className="text-sm text-gray-500">10h30 às 11h30</p>
-                                <div className="mt-2 text-xs text-gray-600 bg-purple-50 p-2 rounded-lg">
-                                  <p>Chegou o momento mais divertido e animado do evento!</p>
-                                  <p className="mt-1">No nosso Concurso de Cosplay, os alunos vão se transformar em personagens de jogos, filmes, séries ou até mesmo em criações originais — vale tudo quando o assunto é criatividade!</p>
-
-                                  <p className="mt-1">🎭 Durante o concurso, cada participante terá um momento especial para mostrar sua fantasia, interpretar o personagem e contar um pouco sobre sua escolha. É o palco perfeito para brilhar!</p>
-
-                                  <p className="mt-1">📢 Votação aberta!</p>
-                                  <p>Todos os participantes do evento poderão votar no cosplay que mais gostarem.</p>
-                                  <p>Ao final, os 3 alunos mais votados receberão prêmios digitais! 🏆✨</p>
-
-                                  <p className="mt-1">🎓 Concurso de Cosplay dos Professores!</p>
-                                  <p>Sim, eles também entram na brincadeira!</p>
-                                  <p>Nossos professores vão se caracterizar e mostrar todo seu talento criativo em um desfile especial.</p>
-                                  <p>Mas aqui, só os alunos votam!</p>
-                                  <p>Ao final, o professor mais votado será eleito o Campeão do Cosplay dos Professores! 👑</p>
-
-                                  <p className="mt-1">📸 Dica importante:</p>
-                                  <p>Arrume bem a iluminação e o espaço onde vai aparecer na câmera.</p>
-                                  <p>Isso ajuda a mostrar melhor cada detalhe do seu cosplay!</p>
-                                </div>
                               </div>
                             </label>
                           </>
