@@ -716,15 +716,15 @@ Equipe Ctrl+Play
 
     // Enviar o email usando EmailJS
     console.log('Enviando email com os parâmetros:', templateParams);
-    console.log('Service ID:', 'service_hacz2wh');
-    console.log('Template ID:', 'template_5rq02t9');
+    console.log('Service ID:', 'service_55pyfhm');
+    console.log('Template ID:', 'template_bq5mkxp');
 
     // Usando o método mais recente com a chave pública explícita
     emailjs.send(
-      'service_hacz2wh',
-      'template_5rq02t9', // Corrigido para o ID correto
+      'service_55pyfhm',
+      'template_bq5mkxp',
       templateParams,
-      'lH5HG9dqpSBR_9_ID' // Chave pública explícita - verifique se está correta
+      '5PdmG5OOJUkJ4NMqC'
     )
     .then((response) => {
       console.log('Email enviado com sucesso!', response);
