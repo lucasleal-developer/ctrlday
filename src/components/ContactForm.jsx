@@ -519,6 +519,27 @@ Equipe Ctrl+Play
       }
     }
 
+    // Extrair informações do conteúdo do email
+    let emailEventsList = '';
+    let emailEventDetails = '';
+
+    if (emailContent.body.includes('Você está inscrito para:')) {
+      const parts = emailContent.body.split('Você está inscrito para:');
+      if (parts.length > 1) {
+        const afterEventsList = parts[1].trim().split('\n');
+        if (afterEventsList.length > 0) {
+          emailEventsList = afterEventsList[0].trim();
+
+          // Extrair os detalhes do evento (tudo entre a lista de eventos e "Lembre-se de entrar")
+          if (afterEventsList.length > 1 && emailContent.body.includes('Lembre-se de entrar')) {
+            const detailsText = parts[1].split('Lembre-se de entrar')[0].trim();
+            // Remover a primeira linha (que é a lista de eventos)
+            emailEventDetails = detailsText.substring(emailEventsList.length).trim();
+          }
+        }
+      }
+    }
+
     // Preparar os dados para o EmailJS
     const templateParams = {
       to_name: formData.name,
@@ -532,8 +553,8 @@ Equipe Ctrl+Play
       event_duration: emailDuration,
       event_platform: 'Zoom',
       event_link: emailLink,
-      events_list: eventsList || '',
-      event_details: eventDetails || ''
+      events_list: emailEventsList,
+      event_details: emailEventDetails
     };
 
     // Enviar o email usando EmailJS
