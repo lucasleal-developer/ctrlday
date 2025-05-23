@@ -200,13 +200,7 @@ Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a orig
           eventTime = '08h às 9:45h';
           eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel\n';
 
-          eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h às 9:45h
-🕒 Duração: 1h45
-📍 Plataforma: Zoom
-
-🔗 Link de acesso: https://zoom.us/j/92535159210
-
-Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
+          eventDetails = `Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
 Durante toda a competição, os alunos deverão manter o compartilhamento de tela ativo.
 
 A banca avaliadora irá julgar os trabalhos com base em:
@@ -314,13 +308,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay\n';
 
         // Texto exato conforme solicitado no arquivo instrucoesnovas.md
-        eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
- 🕒 Duração: 1h45
-📍 Plataforma: Zoom
-
- 🔗 Link de acesso: https://zoom.us/j/92535159210
-
-Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
+        eventDetails = `Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
 Durante toda a competição, os alunos deverão manter o compartilhamento de tela ativo.
 
 A banca avaliadora irá julgar os trabalhos com base em:
@@ -331,9 +319,9 @@ A banca avaliadora irá julgar os trabalhos com base em:
 
 Os professores ficarão responsáveis por tirar prints das telas dos projetos apresentados.
 
- 📺 Tutorial obrigatório – Prepare-se para brilhar!
- 👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
- 🔗 https://youtu.be/_0AFQzUspRc
+📺 Tutorial obrigatório – Prepare-se para brilhar!
+👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
+🔗 https://youtu.be/_0AFQzUspRc
 
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
 
@@ -553,13 +541,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
       emailDuration = '1h45';
       eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay';
 
-      eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
- 🕒 Duração: 1h45
-📍 Plataforma: Zoom
-
- 🔗 Link de acesso: https://zoom.us/j/92535159210
-
-Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
+      eventDetails = `Essa sala será o palco da produção dos projetos em MagicaVoxel, teremos construções tridimensionais surpreendentes!
 Durante toda a competição, os alunos deverão manter o compartilhamento de tela ativo.
 
 A banca avaliadora irá julgar os trabalhos com base em:
@@ -570,9 +552,9 @@ A banca avaliadora irá julgar os trabalhos com base em:
 
 Os professores ficarão responsáveis por tirar prints das telas dos projetos apresentados.
 
- 📺 Tutorial obrigatório – Prepare-se para brilhar!
- 👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
- 🔗 https://youtu.be/_0AFQzUspRc
+📺 Tutorial obrigatório – Prepare-se para brilhar!
+👉 Assista ao tutorial sobre como baixar, instalar e usar o MagicaVoxel com eficiência:
+🔗 https://youtu.be/_0AFQzUspRc
 
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
 
