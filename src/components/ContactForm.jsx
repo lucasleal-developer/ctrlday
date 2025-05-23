@@ -998,6 +998,19 @@ Equipe Ctrl+Play
                               <div>
                                 <span className="font-medium">Concurso de Piskel (Pixel Arte)</span>
                                 <p className="text-sm text-gray-500">08h às 9:45h</p>
+                                <div className="mt-2 text-xs text-gray-600 bg-purple-50 p-2 rounded-lg">
+                                  <p>Nesta sala, os alunos da categoria Teens irão desenvolver suas animações em pixel arte desenvolvidas no Piskel!</p>
+                                  <p className="mt-1">Todos os participantes devem compartilhar a tela durante toda a competição, enquanto apresentam seus projetos para o júri convidado. Os critérios de avaliação incluem:</p>
+                                  <ul className="mt-1 pl-4 space-y-1">
+                                    <li>🔹 Seu Jeito de Criar - (Criatividade e Originalidade)</li>
+                                    <li>🔹 Capricho na Criação - (Execução Técnica)</li>
+                                    <li>🔹 Seguiu o Tema - (Adequação ao Tema Proposto)</li>
+                                  </ul>
+                                  <p className="mt-1">Após a produção, os professores irão solicitar os links dos projetos para registro e análise.</p>
+                                  <p className="mt-2 font-medium">📺 Tutorial obrigatório – Prepare-se para brilhar!</p>
+                                  <p>👉 Assista ao tutorial sobre como acessar, utilizar o Piskel e criar seu projeto com qualidade:</p>
+                                  <p className="text-blue-600">🔗 <a href="https://youtu.be/2fqA1fko2dU" target="_blank" rel="noopener noreferrer">https://youtu.be/2fqA1fko2dU</a></p>
+                                </div>
                               </div>
                             </label>
 
