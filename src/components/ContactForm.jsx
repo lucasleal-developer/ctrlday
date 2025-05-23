@@ -270,8 +270,8 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventTime = '08h às 11h30';
         eventsList = '🎨 Competição de Artes Digitais – Piskel Teens e 🧙‍♂️ Concurso de Cosplay\n';
 
-        // Detalhes do Piskel Teens
-        eventDetails += `🎨 Competição de Artes Digitais – Piskel Teens - 08h às 9:45h
+        // Texto exato conforme solicitado
+        eventDetails = `🎨 Competição de Artes Digitais – Piskel Teens - 08h as 9:45h
 🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
@@ -293,10 +293,9 @@ Após a produção, os professores irão solicitar os links dos projetos para re
 
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
 
-Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a originalidade desses jovens criadores! 💜🚀\n\n`;
+Vamos celebrar juntos a expressão artística, o domínio da ferramenta e a originalidade desses jovens criadores! 💜🚀
 
-        // Detalhes do Cosplay
-        eventDetails += `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
+🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 as 11h30
 🕒 Duração: 1h
 📍 Plataforma: Zoom
 🔗 Link de acesso: https://zoom.us/j/94176618702
@@ -328,8 +327,8 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
         eventTime = '08h às 11h30';
         eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay\n';
 
-        // Detalhes do MagicaVoxel
-        eventDetails += `🧊 Competição de Artes Digitais – MagicaVoxel - 08h às 9:45h
+        // Texto exato conforme solicitado
+        eventDetails = `🧊 Competição de Artes Digitais – MagicaVoxel - 08h as 9:45h
 🕒 Duração: 1h45
 📍 Plataforma: Zoom
 
@@ -352,10 +351,9 @@ Os professores ficarão responsáveis por tirar prints das telas dos projetos ap
 
 Assistir ao tutorial é essencial para entender a ferramenta, evitar problemas durante a competição e garantir o melhor desempenho possível!
 
-Prepare-se para ver mundos incríveis ganharem vida em voxel art — criatividade e técnica em 3D! 💜🚀\n\n`;
+Prepare-se para ver mundos incríveis ganharem vida em voxel art — criatividade e técnica em 3D! 💜🚀
 
-        // Detalhes do Cosplay
-        eventDetails += `🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 às 11h30
+🧙‍♂️ Concurso de Cosplay – Show de Criatividade! - 10h30 as 11h30
 🕒 Duração: 1h
 📍 Plataforma: Zoom
 🔗 Link de acesso: https://zoom.us/j/94176618702
