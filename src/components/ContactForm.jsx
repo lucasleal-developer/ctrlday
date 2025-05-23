@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import axios from 'axios';
 
 const RegistrationForm = () => {
   // Inicializar o EmailJS
@@ -732,12 +731,24 @@ Equipe Ctrl+Play
       // Enviar dados para o Google Sheets
       const SHEET_BEST_URL = 'https://api.sheetbest.com/sheets/a7036743-176d-4e8f-b35d-ccf2ed5b9ebe';
 
-      axios.post(SHEET_BEST_URL, sheetData)
-        .then(sheetResponse => {
-          console.log('Dados enviados para o Google Sheets com sucesso!', sheetResponse);
+      fetch(SHEET_BEST_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sheetData)
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erro ao enviar dados para o Google Sheets');
+          }
+          return response.json();
         })
-        .catch(sheetError => {
-          console.error('Erro ao enviar dados para o Google Sheets:', sheetError);
+        .then(data => {
+          console.log('Dados enviados para o Google Sheets com sucesso!', data);
+        })
+        .catch(error => {
+          console.error('Erro ao enviar dados para o Google Sheets:', error);
         });
 
       // Armazenar o conteúdo do email para exibir na tela de confirmação
