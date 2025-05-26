@@ -55,7 +55,7 @@ const Tutorials = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Prepare-se para as competições assistindo aos nossos tutoriais incríveis!
+            Revisem os tutoriais para se prepararem para as competições do CTRL+DAY!
           </motion.p>
         </div>
 
@@ -111,10 +111,10 @@ const Tutorials = () => {
               <div className="text-2xl mr-3">💡</div>
               <div>
                 <h4 className="text-lg font-bold text-blue-800 mb-2">
-                  Dica!
+                  Lembrete!
                 </h4>
                 <p className="text-blue-700">
-                  Estes tutoriais vão te ajudar a dominar as ferramentas e criar projetos incríveis para as competições!
+                  Revisem estes tutoriais para relembrar as técnicas e se prepararem para mostrar todo seu talento no CTRL+DAY!
                 </p>
               </div>
             </div>

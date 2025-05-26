@@ -8,6 +8,12 @@ const Features = () => {
       description: "Crie incríveis pixel arts usando a plataforma Piskel e mostre seu talento artístico digital. Ideal para todas as idades!",
       color: "bg-gradient-to-br from-purple-100 to-purple-200 text-purple-800",
       iconBg: "bg-gradient-to-br from-purple-500 to-purple-600",
+      bgColor: "from-purple-400 to-purple-500",
+      animatedElements: [
+        { emoji: "👨‍💻", delay: 0, x: 20, y: 15 },
+        { emoji: "👩‍💻", delay: 1, x: 60, y: 25 },
+        { emoji: "🖥️", delay: 2, x: 40, y: 35 }
+      ],
       forKids: true,
       forTeens: true
     },
@@ -17,6 +23,12 @@ const Features = () => {
       description: "Desenvolva modelos 3D usando cubos (voxels) na plataforma MagicaVoxel. Uma atividade desafiadora para os mais experientes!",
       color: "bg-gradient-to-br from-blue-100 to-blue-200 text-blue-800",
       iconBg: "bg-gradient-to-br from-blue-500 to-blue-600",
+      bgColor: "from-blue-400 to-blue-500",
+      animatedElements: [
+        { emoji: "🎮", delay: 0, x: 25, y: 20 },
+        { emoji: "🎨", delay: 1.5, x: 55, y: 30 },
+        { emoji: "🚀", delay: 0.5, x: 70, y: 15 }
+      ],
       forKids: false,
       forTeens: true
     },
@@ -26,6 +38,12 @@ const Features = () => {
       description: "Vista-se como seu personagem favorito de games, animes ou filmes e participe desta competição cheia de criatividade!",
       color: "bg-gradient-to-br from-green-100 to-green-200 text-green-800",
       iconBg: "bg-gradient-to-br from-green-500 to-green-600",
+      bgColor: "from-green-400 to-green-500",
+      animatedElements: [
+        { emoji: "🤖", delay: 0, x: 30, y: 20 },
+        { emoji: "⚙️", delay: 1, x: 60, y: 25 },
+        { emoji: "🔧", delay: 2, x: 45, y: 35 }
+      ],
       forKids: true,
       forTeens: true
     },
@@ -35,6 +53,12 @@ const Features = () => {
       description: "Momento especial para pais e responsáveis conhecerem mais sobre nossa proposta educacional e o impacto da tecnologia no futuro dos alunos.",
       color: "bg-gradient-to-br from-orange-100 to-orange-200 text-orange-800",
       iconBg: "bg-gradient-to-br from-orange-500 to-orange-600",
+      bgColor: "from-orange-400 to-orange-500",
+      animatedElements: [
+        { emoji: "📚", delay: 0, x: 25, y: 20 },
+        { emoji: "💡", delay: 1, x: 55, y: 25 },
+        { emoji: "🎓", delay: 0.5, x: 70, y: 35 }
+      ],
       forParents: true
     },
     {
@@ -43,6 +67,12 @@ const Features = () => {
       description: "Votações ao vivo e premiações digitais para os vencedores das competições. Todos podem participar!",
       color: "bg-gradient-to-br from-yellow-100 to-yellow-200 text-yellow-800",
       iconBg: "bg-gradient-to-br from-yellow-500 to-yellow-600",
+      bgColor: "from-yellow-400 to-yellow-500",
+      animatedElements: [
+        { emoji: "🏆", delay: 0, x: 30, y: 20 },
+        { emoji: "🥇", delay: 1, x: 60, y: 30 },
+        { emoji: "🎉", delay: 0.5, x: 45, y: 15 }
+      ],
       forKids: true,
       forTeens: true
     },
@@ -52,6 +82,12 @@ const Features = () => {
       description: "Participe de discussões, faça perguntas e interaja com outros participantes durante todo o evento via Zoom.",
       color: "bg-gradient-to-br from-indigo-100 to-indigo-200 text-indigo-800",
       iconBg: "bg-gradient-to-br from-indigo-500 to-indigo-600",
+      bgColor: "from-indigo-400 to-indigo-500",
+      animatedElements: [
+        { emoji: "💻", delay: 0, x: 25, y: 25 },
+        { emoji: "📱", delay: 1, x: 55, y: 20 },
+        { emoji: "🌐", delay: 0.5, x: 70, y: 30 }
+      ],
       forKids: true,
       forTeens: true,
       forParents: true
@@ -110,10 +146,10 @@ const Features = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
-            Durante o evento, os alunos podem participar de competições temáticas nas plataformas
+            Nossos alunos poderão mostrar seus talentos nas competições de
             <strong className="text-purple-600"> Piskel</strong> e <strong className="text-blue-600">MagicaVoxel</strong>,
-            além de um <strong className="text-green-600">Concurso de Cosplay</strong> cheio de imaginação!
-            Enquanto isso, os responsáveis são convidados ao <strong className="text-orange-600">Café com o Pedagógico</strong>.
+            além de participar do <strong className="text-green-600">Concurso de Cosplay</strong>!
+            Pais e responsáveis têm um momento especial no <strong className="text-orange-600">Café com o Pedagógico</strong>.
           </motion.p>
         </div>
 
@@ -131,19 +167,42 @@ const Features = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 relative"
             >
-              {/* Gradiente de fundo sutil */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 opacity-50"></div>
+              {/* Área de animação no topo */}
+              <div className={`relative h-24 bg-gradient-to-br ${activity.bgColor} overflow-hidden`}>
+                {/* Elementos animados */}
+                {activity.animatedElements.map((element, elemIndex) => (
+                  <motion.div
+                    key={elemIndex}
+                    className="absolute text-2xl opacity-80"
+                    style={{
+                      left: `${element.x}%`,
+                      top: `${element.y}%`
+                    }}
+                    animate={{
+                      y: [0, -8, 0],
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 10, -10, 0]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: element.delay,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    {element.emoji}
+                  </motion.div>
+                ))}
 
-              <div className={`p-6 ${activity.color} relative z-10`}>
-                <div className="flex items-center mb-3">
-                  <div className={`w-16 h-16 rounded-2xl ${activity.iconBg} flex items-center justify-center mr-4 shadow-lg`}>
-                    <span className="text-white text-2xl">{activity.icon}</span>
-                  </div>
-                  <h3 className="text-xl font-bold">{activity.title}</h3>
+                {/* Ícone principal no canto */}
+                <div className="absolute top-3 right-3 w-10 h-10 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                  <span className="text-white text-lg">{activity.icon}</span>
                 </div>
               </div>
 
+              {/* Conteúdo principal */}
               <div className="p-6 relative z-10">
+                <h3 className="text-xl font-bold mb-4 text-gray-800">{activity.title}</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">{activity.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {activity.forKids && (
