@@ -12,13 +12,25 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="col-span-1 md:col-span-1"
           >
-            <div className="text-white font-bold text-2xl flex items-center mb-4">
-              <span className="text-yellow-300 mr-2">🚀</span>
-              <span className="bg-white text-purple-600 px-2 py-1 rounded-xl mr-1">CTRL+</span>
-              <span className="text-white">PLAY</span>
+            <div className="flex items-center mb-4">
+              {/* Logo da Ctrl+Play */}
+              <div className="relative mr-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-blue-400 to-green-400 rounded-xl flex items-center justify-center shadow-lg transform rotate-12">
+                  <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                    <span className="text-purple-600 font-bold text-lg">🤖</span>
+                  </div>
+                </div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
+              </div>
+              <div>
+                <div className="text-white font-bold text-2xl flex items-center">
+                  <span className="bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">Ctrl+Play</span>
+                </div>
+                <p className="text-xs text-gray-300 font-medium">Escola de Tecnologia</p>
+              </div>
             </div>
-            <p className="text-white/80 mb-4">
-              Transformando o aprendizado em uma experiência envolvente e significativa através da tecnologia e criatividade.
+            <p className="text-white/80 mb-4 leading-relaxed">
+              O <strong className="text-white">CTRL+DAY</strong> é nosso evento especial de celebração da tecnologia, criatividade e conexão!
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors duration-200">
