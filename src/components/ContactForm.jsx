@@ -365,7 +365,7 @@ Esperamos você com carinho! 💜🚀`;
         headerLink = 'https://zoom.us/j/99658262515';
         headerDuration = '1h45';
       } else if (formData.events.includes('voxel') || formData.events.includes('voxel_cosplay')) {
-        headerLink = 'https://zoom.us/j/92535159210';
+        headerLink = 'https://zoom.us/j/96215759146';
         headerDuration = '1h45';
       } else if (formData.events.includes('cosplay')) {
         headerLink = 'https://zoom.us/j/94176618702';
@@ -532,7 +532,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
     // TEENS - Caso tenha selecionado Voxel + Cosplay
     else if (formData.isTeen && formData.events.includes('voxel_cosplay')) {
       eventTime = '08h às 11h30';
-      emailLink = 'https://zoom.us/j/92535159210';
+      emailLink = 'https://zoom.us/j/96215759146';
       emailDuration = '1h45';
       eventsList = '🧊 Competição de Artes Digitais – MagicaVoxel e 🧙‍♂️ Concurso de Cosplay';
 
@@ -625,7 +625,7 @@ Venha se divertir, torcer, votar e celebrar a criatividade de todos — alunos, 
           emailLink = 'https://zoom.us/j/99658262515';
           emailDuration = '1h45';
         } else if (formData.events.includes('voxel')) {
-          emailLink = 'https://zoom.us/j/92535159210';
+          emailLink = 'https://zoom.us/j/96215759146';
           emailDuration = '1h45';
         } else if (formData.events.includes('cosplay')) {
           emailLink = 'https://zoom.us/j/94176618702';
